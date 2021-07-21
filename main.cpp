@@ -35,6 +35,104 @@
 
  6) After you finish defining each type/function, click the [run] button.  Clear up any errors or warnings as best you can.
  */
+#include <iostream>
+// FloatType
+struct FloatType
+{
+    // add
+    float add(float lhs, float rhs)
+    {
+        return lhs + rhs;
+    }
+    
+    // subtract
+    float subtract(float lhs, float rhs)
+    {
+        return lhs - rhs;
+    }
+    
+    // multiply
+    float multiply(float lhs, float rhs)
+    {
+        return lhs * rhs;
+    }
+    
+    // divide
+    float divide(float lhs, float rhs)
+    {
+        if (rhs == 0.0f)
+        {
+            std::cout << "warning, floating point division by zero returns 'inf' !" << std::endl;
+        }
+        return lhs / rhs;
+    }
+};
+
+// DoubleType
+struct DoubleType
+{
+    // add
+    double add(double lhs, double rhs)
+    {
+        return lhs + rhs;
+    }
+    
+    // subtract
+    double subtract(double lhs, double rhs)
+    {
+        return lhs - rhs;
+    }
+    
+    // multiply
+    double multiply(double lhs, double rhs)
+    {
+        return lhs * rhs;
+    }
+    
+    // divide
+    double divide(double lhs, double rhs)
+    {
+        if (rhs == 0.0)
+        {
+            std::cout << "warning, floating point division by zero returns 'inf' !" << std::endl;
+        }
+        return lhs / rhs;
+    }
+};
+
+// IntType
+struct IntType
+{
+    // add
+    int add(int lhs, int rhs)
+    {
+        return lhs + rhs;
+    }
+    
+    // subtract
+    int subtract(int lhs, int rhs)
+    {
+        return lhs - rhs;
+    }
+    
+    // multiply
+    int multiply(int lhs, int rhs)
+    {
+        return lhs * rhs;
+    }
+    
+    // divide
+    int divide(int lhs, int rhs)
+    {
+        if (rhs == 0)
+        {
+            std::cout << "error, integer division by zero will crash the program! Returning lhs." << std::endl;
+            return lhs;
+        }
+
+        return lhs / rhs;
+    }
+};
 
 /*
 your program should generate the following output EXACTLY.
