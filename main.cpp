@@ -129,10 +129,8 @@ struct IntType
             std::cout << "error, integer division by zero will crash the program! Returning lhs." << std::endl;
             return lhs;
         }
-        else
-        {
-            return lhs / rhs;
-        }
+
+        return lhs / rhs;
     }
 };
 
